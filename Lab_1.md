@@ -1,43 +1,45 @@
-Introduction to Linux: History and evolution of Linux , Differences between Linux distributions (Ubuntu flavors, Debian-based vs. others), Overview of Ubuntu and its derivatives (Ubuntu Desktop, Ubuntu Server, Kubuntu, Xubuntu, etc.)
-# Introduction to Linux
-## Overview
-In this experiment, we explore the history and evolution of Linux, compare different Linux distributions, and examine Ubuntu along with its various derivatives.
+# Experiment:  
 
-## Description
-### 1. History and Evolution of Linux
-- Linux was created by **Linus Torvalds** in 1991 as a free and open-source operating system.
-- Inspired by UNIX, Linux evolved with contributions from developers worldwide.
-- Today, Linux powers **servers, mobile devices (Android), IoT devices, and supercomputers**.
+## Question  
+Use the `touch` command to create sets of empty practice files to use during this lab.  
+- In each set, replace **X** with the numbers **1 through 6**.  
+- Create six files with names of the form:  
+  - `songX.mp3`  
+  - `snapX.jpg`  
+  - `filmX.avi`  
+- Create three subdirectories for organizing your files, and name the subdirectories:  
+  - `friends`  
+  - `family`  
+  - `work`  
+- Use a **single command** to create all three subdirectories at the same time.  
 
-### 2. Differences Between Linux Distributions
-Linux distributions vary based on **package management, target users, and use cases**. The major categories include:
+## Description  
 
-- **Debian-based (e.g., Ubuntu, Linux Mint)**
-  - Uses **APT** (Advanced Packaging Tool) for package management.
-  - Stable and widely supported.
-  
-- **Red Hat-based (e.g., Fedora, CentOS, RHEL)**
-  - Uses **YUM/DNF** for package management.
-  - Preferred for enterprise and cloud computing.
+In this experiment, we use:  
+1. **File Creation**  
+   - The `touch` command to create **six** sets of empty files.  
+   - We replace **X** with numbers **1 to 6** in file names.  
+2. **Directory Creation**  
+   - The `mkdir` command to create multiple directories in **one command**.  
 
-- **Arch-based (e.g., Arch Linux, Manjaro)**
-  - Uses **Pacman** as a package manager.
-  - Rolling-release model for cutting-edge updates.
+## Screenshot  
+![image](https://github.com/user-attachments/assets/b2b368c3-a6d9-4719-b13a-9462319bb58c)
 
-- **Other distributions (e.g., openSUSE, Solus, Gentoo)**
-  - Unique architectures and package management systems.
 
-### 3. Overview of Ubuntu and Its Derivatives
-Ubuntu is a **Debian-based distribution** developed by **Canonical**. It offers several versions tailored for different use cases:
+## Commands Used  
 
-- **Ubuntu Desktop** – User-friendly interface for personal computers.
-- **Ubuntu Server** – Optimized for cloud computing and enterprise environments.
-- **Kubuntu** – Uses the **KDE Plasma** desktop environment.
-- **Xubuntu** – Lightweight version with the **Xfce** desktop.
-- **Lubuntu** – Minimalist version for low-end hardware.
-- **Ubuntu Studio** – Designed for multimedia production.
-  
-## Screenshot
-_(Include a relevant screenshot here if needed)_
+```bash
+# 1. Navigate to the Desktop (or preferred location)
+cd ~/Desktop
 
-## Commands Used
+# 2. Create a directory for organizing the files
+mkdir practice_lab && cd practice_lab
+
+# 3. Use the touch command with brace expansion to create multiple empty files
+touch song{1..6}.mp3 snap{1..6}.jpg film{1..6}.avi
+
+# 4. Create all three subdirectories at the same time
+mkdir friends family work
+
+# 5. Verify the created files and directories
+ls -l
